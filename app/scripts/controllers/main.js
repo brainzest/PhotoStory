@@ -61,8 +61,9 @@ angular.module('photostoryApp')
       });
     **/
 
-    $scope.openLightboxModal = function (index) {
-     Lightbox.openModal($scope.images, index);
+    $scope.openLightboxModal = function (image) {
+      var index=  $scope.images.indexOf(image);
+      Lightbox.openModal($scope.images, index);
     };
   })
   .config(function (LightboxProvider) {
