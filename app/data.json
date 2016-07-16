@@ -2,23 +2,27 @@
   "url": "images/ac_l.jpg",
   "thumbUrl": "images/abe_s.jpg",
   "description": "This image has dimensions 2048x1519 and the img element is scaled to fit inside the window.",
-  "tag":"Game"
+  "tag":"Game",
+  "order":1
 },
 {
   "url": "images/coa_l.jpg",
   "thumbUrl": "images/mmho_s.jpg",
-  "tag":"Assassin Creed"
+  "tag":"Assassin Creed",
+  "order":15
 },
 {
   "url": "images/coa_l.jpg",
   "thumbUrl": "images/coa_l.jpg",
   "description": "The left and right arrow keys are binded for navigation. ",
-  "tag":"Watch Dogs"
+  "tag":"Watch Dogs",
+  "order":10
 },{
   "url": "images/ac_l.jpg",
   "thumbUrl": "images/abe_s.jpg",
   "description": "This image has dimensions 2048x1519 and the img element is scaled to fit inside the window.",
-  "tag":"Game"
+  "tag":"Game",
+  "order":2
 },
 {
   "url": "images/coa_l.jpg",

@@ -8,8 +8,8 @@
  * Controller of the photostoryApp
  */
 angular.module('photostoryApp')
-  .controller('MainCtrl', function ($scope,$http,Lightbox,Image) {
-
+  .controller('MainCtrl', function ($scope,$rootScope,$http,Lightbox,Image) {
+    $scope.authenticated=false;
     $scope.images=[];
     $scope.filteredImages=[];
     $scope.currentPage = 1;
@@ -28,7 +28,17 @@ angular.module('photostoryApp')
       });
 
     }
+    $scope.login=function(){
+      $scope.authenticated=true;
+      $rootScope.order = 'order';
 
+    }
+
+    $scope.logout=function(){
+      $scope.authenticated=false;
+      $rootScope.order = '';
+
+    }
     $scope.selected = '';
     $scope.$watch("currentPage + numPerPage + selected", function() {
       var begin = (($scope.currentPage - 1) * $scope.numPerPage)
@@ -50,6 +60,9 @@ angular.module('photostoryApp')
         return response.data;
       });
     };
+
+
+
   })
   .config(function (LightboxProvider) {
     LightboxProvider.fullScreenMode = true;
