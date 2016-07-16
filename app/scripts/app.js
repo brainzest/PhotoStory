@@ -17,8 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'bootstrapLightbox'
+  
+    'bootstrapLightbox','ngMaterial'
   ])
   .config(function ($routeProvider) {
     $routeProvider

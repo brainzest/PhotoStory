@@ -1,43 +1,54 @@
 <div class="content top" ng-init="getData()">
-  <h1 class="photo">Photo Stories</h1>
-  <form class="form-inline">
-          <div class="form-group">
-              <label>Search</label>
-              <input type="text" ng-model="selected" placeholder="Seach by Tags"
-                    uib-typeahead="t as t.tag for t in getTags($viewValue)"
-                    typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-                  <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
-                  <div ng-show="noResults">
-                    <i class="glyphicon glyphicon-remove"></i> No Results Found
-                  </div>
+  <div class="header-title">
+    <h1 class="photo">Photo Stories</h1>
+    <form class="form-inline search pull-right">
+      <div class="form-group">
+          <input type="text" ng-model="selected" placeholder="Seach by Tags"
+                uib-typeahead="t as t.tag for t in getTags($viewValue)"
+                typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+          <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+          <div ng-show="noResults">
+            <i class="glyphicon glyphicon-remove"></i> No Results Found
           </div>
-      </form>
+      </div>
+    </form>
+  </div>
 
-  <div class="row" >
 
-      <div class="col-md-3 col-sm-6 col-xs-12 " ng-repeat="image in filteredImages| filter:selected | orderBy:order">
+
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12 " ng-repeat="image in images| filter:selected | orderBy:order">
         <a class="img-area" ng-click="openLightboxModal($index)">
-          <img ng-src="{{image.thumbUrl}}" class="img" >
-          <span class="text-content">
+          <div back-img="{{image.thumbUrl}}" class="img img-responsive" >
+            <span class="text-content">
             <span>{{image.description}}</span>
             <label>{{image.tag}}</label>
-          </span>
-        </img>
-
+            </span>
+          </div>
         </a>
       </div>
 
-
   </div>
+</div>
+<!-- <div class='md-padding' layout="row" flex>
+        <div layout="row" flex>
+            <div class="parent" layout="column" ng-repeat="image in filteredImages| filter:selected | orderBy:order" flex>
+               <md-card  class="card">
+                    <img ng-src="{{images.thumbUrl}}">
+                </md-card>
+            </div>
+        </div>
+      </div>
+    </div> -->
 
 
 
-
-  </div>
 
 <div class="row marketing">
-  <uib-pagination   ng-if="!blocked" total-items="images.length" ng-model="currentPage"
+  <!--Pagination not required-->
+  <!-- <uib-pagination   ng-if="!blocked" total-items="images.length" ng-model="currentPage"
    max-size="maxSize" class="pagination-sm"
    boundary-link-numbers="true">
-  </uib-pagination>
+  </uib-pagination> -->
 </div>

@@ -30,7 +30,7 @@ body {
 /* Custom page header */
 .header {
   border-bottom: none;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -52,12 +52,11 @@ span.text-content {
 	cursor: pointer;
 	display: block;
 
-  top: 1em;
+  top: 2em;
   left:1em;
   right:1em;
 	position: absolute;
-  bottom:2em;
-//	width: 150px;
+  bottom:0em;
 	opacity: 0;
 	-webkit-transition: opacity 500ms;
 	-moz-transition: opacity 500ms;
@@ -72,19 +71,27 @@ span.text-content {
     }
   }
 }
+.search {
+  margin-top: 20px;
+}
 .img{
   width: 100%;
-  height: 200px;
-  margin-bottom:2em;
-  margin-top: 1em;
+  margin-top: 2em;
+  height: auto;
+  min-height: 160px;
 }
+
+h1.photo {
+    display: inline-block;
+}
+
 .content {
   .top {
     margin-top: "40px";
   }
 }
-.photo {
-  font-family: Helvetica;
+.header-title {
+  font-family: Arial;
   border-bottom: 2px solid #2a4884;
 }
 /* Custom page footer */
@@ -140,7 +147,7 @@ span.text-content {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {

@@ -12,7 +12,8 @@
     "angular-route": "1.4.3",
     "angular-sanitize": "1.4.3",
     "angular-touch": "1.4.3",
-    "angular-bootstrap-lightbox": "^0.12.0"
+    "angular-bootstrap-lightbox": "^0.12.0",
+    "angular-material":"*"
   },
   "devDependencies": {
     "angular-mocks": "1.4.3"
